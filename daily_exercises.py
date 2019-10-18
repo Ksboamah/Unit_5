@@ -6,25 +6,22 @@ def choose_upper_value():
 def choose_lower_value(small):
     big = int(input("to (Pick a number)")) + 1
     if small > big:
-        new_big = int(input("Your upper value is bigger than your lower value. Enter in appropriate values"))
-        return new_big
-    else:
-        return big
+        y_n = input("Your lower value is larger than your Upper value. Do you wish to count down? Type (Yes)/(No)")
+        if y_n == "Y":
+            new_big = int(input("Your upper value is bigger than your lower value. Enter in appropriate values"))
+            return new_big
+        else:
+            return big
 
 
 def counter(small, big, new_big):
-
-    else:
-        for x in range(small, big, new_big):
-            print(x)
+    for x in range(small, big or new_big, -1):
+        print(x)
 
 
 def main():
     small = choose_upper_value()
-    big = choose_lower_value(small)
-    new big = if small > big or new_big:
-                new_big = int(input("Your upper value is bigger than your lower value. Enter in appropriate values"))
-                return new_big
+    big, new_big = choose_lower_value(small)
     counter(small, big, new_big)
 
 
